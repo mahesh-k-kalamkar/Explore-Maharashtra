@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.ExploreMaharashtra.R;
+import com.project.ExploreMaharashtra.menu.Constants.Constants;
 import com.project.ExploreMaharashtra.menu.home.home_detail.HomeDetailActivity;
 import com.project.ExploreMaharashtra.menu.home.model.HomeModel;
 
@@ -19,6 +20,7 @@ import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     List<HomeModel> listHome;
+    ImageView detailpageImg;
 
     public HomeAdapter(List<HomeModel> listHome) {
         this.listHome = listHome;
@@ -37,12 +39,19 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
         holder.imageRecommended.setBackgroundResource(list.getImage());
         holder.textName.setText(list.getName());
-        holder.textPrice.setText(list.getPrice());
+//        holder.textPrice.setText(list.getPrice());
         holder.textLocation.setText(list.getLocation());
         holder.containerRecommended.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                view.getContext().startActivity(new Intent(view.getContext(), HomeDetailActivity.class));
+//                view.getContext().startActivity(new Intent(view.getContext(), HomeDetailActivity.class));
+                Intent intent = new Intent(view.getContext(), HomeDetailActivity.class);
+                view.getContext().startActivity(intent);
+
+                Constants.ImageForDetailPage = list.getImage();
+                Constants.LocationForDetailPage = list.getLocation();
+                Constants.TitleForDetailPage = list.getName();
+
 //                Toast.makeText(view.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -62,10 +71,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             super(itemView);
 
             containerRecommended = itemView.findViewById(R.id.container_recommended);
-            imageRecommended     = itemView.findViewById(R.id.item_recommended_image);
-            textName             = itemView.findViewById(R.id.item_recommended_name);
-            textPrice            = itemView.findViewById(R.id.item_recommended_price);
-            textLocation         = itemView.findViewById(R.id.item_recommended_location);
+            imageRecommended = itemView.findViewById(R.id.item_recommended_image);
+            textName = itemView.findViewById(R.id.item_recommended_name);
+//            textPrice            = itemView.findViewById(R.id.item_recommended_price);
+            textLocation = itemView.findViewById(R.id.item_recommended_location);
         }
     }
 }

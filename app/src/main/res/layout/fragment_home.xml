@@ -35,15 +35,78 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="-5dp"
                 android:fontFamily="@font/nunito_black"
-                android:text="Laundry Service"
-                android:textColor="@color/dark_late_gray"
+                android:text="@string/maharashtra"
+                android:textColor="@color/orange"
                 android:textSize="24sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home_banner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/title_bold"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="15dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ricefarm" />
+
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sindhudurg_fort" />
+
+
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/shivmaharaj" />
+
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/leopard" />
+
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/indiagate" />
+
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/konkan_temple" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:id="@+id/search"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_below="@+id/title_bold"
+                android:layout_below="@+id/home_banner"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="15dp"
@@ -58,7 +121,7 @@
                     android:layout_height="wrap_content"
                     android:iconifiedByDefault="false"
                     android:queryBackground="@android:color/transparent"
-                    android:queryHint="Search Services"
+                    android:queryHint="Explore Here"
                     android:searchIcon="@drawable/ic_search_services"
                     android:theme="@style/SearchView"
                     app:queryBackground="@android:color/transparent" />
@@ -69,7 +132,7 @@
                 android:id="@+id/button_filter"
                 android:layout_width="50dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/title_bold"
+                android:layout_below="@+id/home_banner"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="15dp"
@@ -85,7 +148,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/nunito_black"
-                android:text="@string/choose_services"
+                android:text="MAJESTIC MAHARASHTRA"
                 android:textColor="@color/dark_late_gray"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -101,120 +164,271 @@
                 android:paddingBottom="20dp"
                 tools:ignore="RtlSymmetry">
 
-                <RelativeLayout
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:gravity="center_horizontal">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
 
-                    <ImageView
-                        android:id="@+id/image_1"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_centerHorizontal="true"
-                        android:background="@drawable/bg_item_choose_services"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_iron"
-                        tools:ignore="ContentDescription" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/image_1"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/nunito_bold"
-                        android:text="@string/ironing"
-                        android:textAlignment="center"
-                        android:textColor="@color/dark_late_gray"
-                        android:textSize="11sp"
-                        tools:ignore="SmallSp" />
-                </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:gravity="center_horizontal">
 
-                <RelativeLayout
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:gravity="center_horizontal">
+                            <ImageView
+                                android:id="@+id/image_1"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:padding="10dp"
+                                android:src="@drawable/natureandwild"
+                                tools:ignore="ContentDescription" />
 
-                    <ImageView
-                        android:id="@+id/image_2"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_centerHorizontal="true"
-                        android:background="@drawable/bg_item_choose_services"
-                        android:padding="15dp"
-                        android:src="@drawable/ic_washing_machine"
-                        tools:ignore="ContentDescription" />
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_1"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="@string/nature"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
 
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/image_2"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/nunito_bold"
-                        android:text="@string/wash_and_iron"
-                        android:textAlignment="center"
-                        android:textColor="@color/dark_late_gray"
-                        android:textSize="11sp"
-                        tools:ignore="SmallSp" />
-                </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
 
-                <RelativeLayout
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:gravity="center_horizontal">
+                            <ImageView
+                                android:id="@+id/image_2"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:padding="10dp"
+                                android:src="@drawable/beach"
+                                tools:ignore="ContentDescription" />
 
-                    <ImageView
-                        android:id="@+id/image_3"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_centerHorizontal="true"
-                        android:background="@drawable/bg_item_choose_services"
-                        android:padding="15dp"
-                        android:src="@drawable/ic_shirt"
-                        tools:ignore="ContentDescription" />
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_2"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="Beaches"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
 
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/image_3"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/nunito_bold"
-                        android:text="@string/dry_cleaning"
-                        android:textAlignment="center"
-                        android:textColor="@color/dark_late_gray"
-                        android:textSize="11sp"
-                        tools:ignore="SmallSp" />
-                </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
 
-                <RelativeLayout
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
+                            <ImageView
+                                android:id="@+id/image_3"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:padding="10dp"
+                                android:src="@drawable/hotel"
+                                tools:ignore="ContentDescription" />
 
-                    <ImageView
-                        android:id="@+id/image_4"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_centerHorizontal="true"
-                        android:background="@drawable/bg_item_choose_services"
-                        android:padding="15dp"
-                        android:src="@drawable/ic_more"
-                        tools:ignore="ContentDescription" />
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_3"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="City Stay"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
 
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/image_4"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/nunito_bold"
-                        android:text="@string/more"
-                        android:textAlignment="center"
-                        android:textColor="@color/dark_late_gray"
-                        android:textSize="11sp"
-                        tools:ignore="SmallSp" />
-                </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:id="@+id/image_4"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:padding="10dp"
+                                android:src="@drawable/temple"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_4"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="Heritage"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:id="@+id/image_5"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:padding="10dp"
+                                android:src="@drawable/hillstation"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_5"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="Hill      Station"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:id="@+id/image_6"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:src="@drawable/naturestay"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_6"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="Nature    Stay"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:id="@+id/image_7"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:src="@drawable/lake"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_7"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="Lake View Stay"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:id="@+id/image_8"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:padding="10dp"
+                                android:src="@drawable/scubadiver"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_8"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="Aquatic Sports"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:id="@+id/image_9"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_item_choose_services"
+                                android:padding="10dp"
+                                android:src="@drawable/uniqueexperiences"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image_9"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="Unique Experience"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_late_gray"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
             </LinearLayout>
 
             <RelativeLayout

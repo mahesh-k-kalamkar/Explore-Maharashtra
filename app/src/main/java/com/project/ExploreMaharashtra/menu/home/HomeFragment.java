@@ -2,16 +2,15 @@ package com.project.ExploreMaharashtra.menu.home;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.project.ExploreMaharashtra.R;
 import com.project.ExploreMaharashtra.menu.home.adapter.HomeAdapter;
@@ -44,14 +43,18 @@ public class HomeFragment extends Fragment {
     private void initData() {
         homeModelList = new ArrayList<>();
 
-        homeModelList.add(new HomeModel(R.drawable.bg_post1, "Amanda Laundry", "$10-$20", "Distance 1.2 km" ));
-        homeModelList.add(new HomeModel(R.drawable.bg_post2, "Papa Laundry", "$30-$40", "Distance 1.3 km" ));
-        homeModelList.add(new HomeModel(R.drawable.bg_post3, "Mama Laundry", "$50-$60", "Distance 1.4 km" ));
+        homeModelList.add(new HomeModel(R.drawable.bmcmumbai, "BMC UrbsPrima Heritage Walk", "", "Mumbai"));
+        homeModelList.add(new HomeModel(R.drawable.kothaligadtrek, "Trek To Kothalgad", "", "Karjat"));
+        homeModelList.add(new HomeModel(R.drawable.boatclub, "BOAT CLUB", "", "Nashik"));
+        homeModelList.add(new HomeModel(R.drawable.matheran, "Matheran", "", "Raigad"));
+        homeModelList.add(new HomeModel(R.drawable.caravan, "Caravan", "", "Mumbai"));
+        homeModelList.add(new HomeModel(R.drawable.alibag, "Alibag", "", "Raigad"));
+
     }
 
     private void setAdapterType(View view) {
-        recyclerView    = view.findViewById(R.id.recyclerview_recommended);
-        layoutManager   = new LinearLayoutManager(mContext);
+        recyclerView = view.findViewById(R.id.recyclerview_recommended);
+        layoutManager = new LinearLayoutManager(mContext);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));

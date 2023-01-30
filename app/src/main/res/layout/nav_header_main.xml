@@ -14,14 +14,25 @@
         android:paddingStart="16dp"
         tools:ignore="RtlSymmetry">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardPreventCornerOverlap="true"
+            android:elevation="15dp"
+            app:cardElevation="15dp"
+            android:layout_gravity="center">
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_laundry"
+            android:src="@drawable/maharashtra_icon"
             android:tint="@color/white"
             app:civ_border_color="@android:color/white"
             app:civ_border_width="3dp" />
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/atv_name_header"
@@ -30,7 +41,7 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/nunito_black"
             android:gravity="center_horizontal"
-            android:text="Laundry App UI"
+            android:text="@string/explore_maharashtra"
             android:textColor="@color/dark_late_gray"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -41,7 +52,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_bold"
             android:paddingBottom="15dp"
-            android:text="laundryappui@gmail.com"
+            android:text="explore.maharashtra@gmail.com"
             android:textColor="@color/dark_late_gray"
             android:textSize="12sp" />
 
